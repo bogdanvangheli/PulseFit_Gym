@@ -94,37 +94,3 @@ header #button .trial-btn {
 header #button .trial-btn .material-symbols-outlined {
     font-size: 18px;
 }
-
-
-
-header {
-    min-height: 80px;
-}
-
-header .header-container {
-    min-height: 80px;
-}
-
-header #logo #text,
-header #button .trial-btn {
-    white-space: nowrap;
-}
-
-@media (max-width: 1000px) {
-    header .header-container {
-        grid-template-columns: 1fr auto;
-        padding: 0 24px;
-    }
-
-    header nav {
-        display: none;
-    }
-}
-body {
-    overflow-x: hidden;
-}
-main {
-    padding: 0 24px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
