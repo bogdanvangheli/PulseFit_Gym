@@ -9,12 +9,13 @@ header {
     background-color: #111827;
     position: sticky;
     top: 0;
+    z-index: 40;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 header .header-container {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
-    /* nav exact la mijloc */
     align-items: center;
     column-gap: 231px;
     height: 80px;
@@ -38,7 +39,7 @@ header #logo #cercle {
     align-items: center;
     justify-content: center;
 }
- 
+
 header #logo #cercle img {
     width: 24px;
     height: 24px;
@@ -81,11 +82,11 @@ header nav ul#main-navigation li a.active {
 }
 
 
-header #button {
+header .button {
     justify-self: end;
 }
 
-header #button .trial-btn {
+header .button .trial-btn {
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -97,11 +98,62 @@ header #button .trial-btn {
     font-family: 'Manrope', sans-serif;
     font-size: 16px;
 }
-header #button .trial-btn:hover {
+
+header .button .trial-btn:hover {
     background-color: #0b5952;
 }
 
 
-header #button .trial-btn .material-symbols-outlined {
+header .button .trial-btn .material-symbols-outlined {
     font-size: 18px;
 }
+
+section.home {
+    height: 55.56vh;
+    max-height: 600px;
+    position: relative;
+    background-color: #111827;
+}
+ 
+section.home div.home-container {
+    gap: 40px;
+    padding: 80px 32px;
+    margin: 0 30px;
+    position: relative;
+}
+section.home div.home-container div#home-text {
+    height: 440px;
+
+}
+section.home div.home-container div p.eyebrow {
+    font-family: 'Manrope', sans-serif;
+    color: rgb(15, 118, 110);
+    margin-bottom: 16px;
+    font-size: 12px;
+    letter-spacing: 2.16px;
+    line-height: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+section.home div.home-container div p.eyebrow::before {
+  content: "";
+  width: 32px;
+  height: 2px;
+  background-color: rgb(15, 118, 110);
+}
+
+section.home div.home-container div h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #ffffff;
+    font-size: 72px;
+    font-weight: 800;
+    letter-spacing: -3.96px;
+    line-height: 67.7px;
+    margin-bottom: 16px;
+}
+
+
+
