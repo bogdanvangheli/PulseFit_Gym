@@ -110,6 +110,7 @@ section.home {
     min-height: 55.56vh;
     position: relative;
     background-color: #111827;
+    
 }
 
 section.home div.home-container {
@@ -208,11 +209,27 @@ section.home .trial-btn .material-symbols-outlined {
 }
 
 section.home div.home-container div.statistics {
-    height: 73px;
     width: 592px;
     padding-top: 24px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     display: grid;
     grid-template-rows: repeat(2, auto);
     grid-auto-flow: column;
+    justify-content: start;
+    column-gap: 32px;
+
+}
+
+section.home div.statistics .stat-number {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+    color: #ffffff;
+}
+
+section.home div.statistics .stat-label {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
 }
