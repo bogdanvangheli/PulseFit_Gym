@@ -17,7 +17,6 @@ header .header-container {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    column-gap: 231px;
     height: 80px;
     padding: 0 32px;
     margin: 0 30px;
@@ -49,7 +48,7 @@ header #logo #text {
     color: #ffffff;
     font-family: 'Space Grotesk', sans-serif;
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 0.8px;
     line-height: 28px;
 }
@@ -81,7 +80,6 @@ header nav ul#main-navigation li a.active {
     border-bottom: 2px solid #2dd4bf;
 }
 
-
 header .button {
     justify-self: end;
 }
@@ -103,57 +101,118 @@ header .button .trial-btn:hover {
     background-color: #0b5952;
 }
 
-
 header .button .trial-btn .material-symbols-outlined {
     font-size: 18px;
 }
 
+
 section.home {
-    height: 55.56vh;
-    max-height: 600px;
+    min-height: 55.56vh;
     position: relative;
     background-color: #111827;
 }
- 
+
 section.home div.home-container {
-    gap: 40px;
     padding: 80px 32px;
     margin: 0 30px;
     position: relative;
 }
+
 section.home div.home-container div#home-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     height: 440px;
+    width: 592px;
 
 }
-section.home div.home-container div p.eyebrow {
-    font-family: 'Manrope', sans-serif;
-    color: rgb(15, 118, 110);
-    margin-bottom: 16px;
-    font-size: 12px;
-    letter-spacing: 2.16px;
-    line-height: 16px;
-    font-weight: 800;
-    text-transform: uppercase;
+
+section.home p.eyebrow {
     display: flex;
     align-items: center;
     gap: 12px;
-}
-section.home div.home-container div p.eyebrow::before {
-  content: "";
-  width: 32px;
-  height: 2px;
-  background-color: rgb(15, 118, 110);
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2.16px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: rgb(15, 118, 110);
+    margin-bottom: 16px;
 }
 
-section.home div.home-container div h1 {
+section.home p.eyebrow::before {
+    content: "";
+    width: 32px;
+    height: 2px;
+    background-color: rgb(15, 118, 110);
+}
+
+section.home h1 {
+    margin: 0;
     font-family: 'Space Grotesk', sans-serif;
-    color: #ffffff;
     font-size: 72px;
     font-weight: 800;
     letter-spacing: -3.96px;
     line-height: 67.7px;
-    margin-bottom: 16px;
+    color: #ffffff;
+    margin-bottom: 24px;
 }
 
+section.home p.description {
+    margin: 0;
+    max-width: 520px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 32px;
+}
 
+section.home .hero-buttons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 40px;
+}
 
+section.home .trial-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border-radius: 999px;
+    background-color: #0f766e;
+    border: 1px solid transparent;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+}
+
+section.home .trial-btn:hover {
+    background-color: #0b5952;
+}
+
+section.home .trial-btn.secondary {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+section.home .trial-btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+section.home .trial-btn .material-symbols-outlined {
+    font-size: 18px;
+}
+
+section.home div.home-container div.statistics {
+    height: 73px;
+    width: 592px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-auto-flow: column;
+}
