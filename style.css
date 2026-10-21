@@ -197,7 +197,7 @@ section.home .home-container #home-text {
 }
 
 .home #hero-buttons .first-button .material-symbols-outlined {
-    font-size: 16px;
+    font-size: 17px;
     color: #ffffff;
 }
 
@@ -246,12 +246,129 @@ section.home .home-container #home-text {
     color: #ffffff;
 }
 
-.home .statistics .stat-label {
+.home .statistics .stat-text {
     font-family: 'Manrope', sans-serif;
     font-size: 14px;
     color: rgba(255, 255, 255, 0.6);
 }
 
-#today-clases {
+.home #today-clases {
+    width: 504px;
+    height: 349px;
     background-color: #172033;
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.home #today-clases #upper-text {
+    width: 446px;
+    height: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 128px
+}
+
+
+.home #today-clases #upper-text #text-block #eyebrow2 {
+    height: 16px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1.92px;
+    font-weight: 700;
+    color: #5EEAD4;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+
+.home #today-clases #upper-text #text-block h2 {
+    margin: 0;
+    height: 32px;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0%;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.home #today-clases #upper-text a {
+    height: 24px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgba(225, 225, 255, 0.5);
+    transition: 0.1s;
+    text-decoration: none;
+}
+
+.home #today-clases #upper-text a:hover {
+    color: #ffffff;
+}
+
+.home #today-clases .today-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 446px;
+    height: 77px;
+    gap: 12px;
+}
+.home #today-clases .today-card .time{
+    font-family: 'Space Grotesk', sans-serif;    
+    font-size: 20px;
+    line-height: 28px;
+line-height: 700;
+color: #5EEAD4;
+}
+.home #today-clases .today-card .textblock2{
+    width: 318px;
+    height: 44px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.home #today-clases .today-card .text-block2 .clases{ 
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #ffffff;
+    height: 24px;
+    width: 318px;
+}
+.home #today-clases .today-card .text-block2 .coaches{
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    color: rgba(225, 225, 255, 0.5);
+    width: 318px;
+    height: 16px;
+    margin-top: 4px;
+}
+.home #today-clases .today-card .arrow{
+    display: flex;
+}
+.home #today-clases .today-card .arrow  a{
+    background:transparent;
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.home #today-clases .today-card .arrow  a .material-symbols-outlined{
+    color: #ffffff ;
+    font-weight: 2;
+    font-size: 17px;
 }
