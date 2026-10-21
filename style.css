@@ -4,6 +4,7 @@ body {
 }
 
 header {
+    z-index: 40;
     height: 81px;
     background-color: #111827;
     position: sticky;
@@ -112,6 +113,8 @@ header .header-button .FTB:hover {
 .home {
     height: 600px;
     background-color: #111827;
+    position: relative;
+    overflow: hidden;
 }
 
 .home .home-container {
@@ -119,6 +122,8 @@ header .header-button .FTB:hover {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    position: relative;
+    z-index: 1;
 }
 
 section.home .home-container #home-text {
@@ -311,7 +316,7 @@ section.home .home-container #home-text {
     color: #ffffff;
 }
 
-.home #today-clases .today-card{
+.home #today-clases .today-card {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -319,21 +324,25 @@ section.home .home-container #home-text {
     height: 77px;
     gap: 12px;
 }
-.home #today-clases .today-card .time{
-    font-family: 'Space Grotesk', sans-serif;    
+
+.home #today-clases .today-card .time {
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 20px;
     line-height: 28px;
-line-height: 700;
-color: #5EEAD4;
+    font-weight: 700;
+    color: #5EEAD4;
 }
-.home #today-clases .today-card .textblock2{
+
+.home #today-clases .today-card .text-block2 {
     width: 318px;
     height: 44px;
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
-.home #today-clases .today-card .text-block2 .clases{ 
+
+.home #today-clases .today-card .text-block2 .clases {
     font-family: 'Manrope', sans-serif;
     font-size: 16px;
     font-weight: 700;
@@ -342,7 +351,8 @@ color: #5EEAD4;
     height: 24px;
     width: 318px;
 }
-.home #today-clases .today-card .text-block2 .coaches{
+
+.home #today-clases .today-card .text-block2 .coaches {
     font-family: 'Manrope', sans-serif;
     font-size: 12px;
     line-height: 16px;
@@ -352,23 +362,45 @@ color: #5EEAD4;
     height: 16px;
     margin-top: 4px;
 }
-.home #today-clases .today-card .arrow{
+
+.home #today-clases .today-card .arrow {
     display: flex;
 }
-.home #today-clases .today-card .arrow  a{
-    background:transparent;
+
+.home #today-clases .today-card .arrow a {
+    background: transparent;
     width: 40px;
     height: 40px;
     border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    transition: 0.2s;
 }
 
-.home #today-clases .today-card .arrow  a .material-symbols-outlined{
-    color: #ffffff ;
+.home #today-clases .today-card .arrow a .material-symbols-outlined {
+    color: #ffffff;
     font-weight: 2;
     font-size: 17px;
+}
+
+.home #today-clases .today-card:hover .arrow a {
+    background-color: #0F766E;
+    border: 2px solid rgb(21, 150, 139)
+}
+
+.home #background-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 778px;
+    height: 100%;
+    z-index: 0;
+    background-image: linear-gradient(90deg, #111827 15%, rgba(17, 24, 39, 0.6) 40%, rgba(17, 24, 39, 0.4) 100%),
+        url(images/background-hero.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
