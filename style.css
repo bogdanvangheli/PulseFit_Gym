@@ -78,19 +78,20 @@ header nav ul#main-navigation li a.active {
     border-bottom: 2px solid #2dd4bf;
 }
 
-header .trial-button {
+header .header-button {
     display: flex;
-    align-items: center;
+
+}
+
+header .header-button .FTB {
+    display: flex;
     justify-content: center;
+    align-items: center;
     gap: 12px;
     background-color: #0F766E;
     border-radius: 999px;
     width: 140px;
     height: 48px;
-    transition: 0.2s;
-}
-
-header .trial-button #link-button {
     text-decoration: none;
     font-size: 16px;
     color: #ffffff;
@@ -98,12 +99,12 @@ header .trial-button #link-button {
     font-weight: 400;
 }
 
-header .trial-button .material-symbols-outlined {
+header .header-button .FTB .material-symbols-outlined {
     font-size: 16px;
     color: #ffffff;
 }
 
-header .trial-button:hover {
+header .header-button .FTB:hover {
     background-color: #0b5952;
 }
 
@@ -145,7 +146,7 @@ section.home .home-container #home-text {
 }
 
 .home .eyebrow::before {
-    content:"";
+    content: "";
     width: 32px;
     height: 2px;
     background-color: rgb(15, 118, 110);
@@ -172,13 +173,13 @@ section.home .home-container #home-text {
     margin-bottom: 32px;
 }
 
-.home .hero-buttons {
+.home #hero-buttons {
     display: flex;
     gap: 16px;
     margin-bottom: 40px;
 }
 
-.home .hero-buttons .trial-button{
+.home #hero-buttons .first-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -187,28 +188,42 @@ section.home .home-container #home-text {
     border-radius: 999px;
     width: 191px;
     height: 48px;
-    transition: 0.2s;
-}
-
-.home .hero-buttons .trial-button .link-button{
     text-decoration: none;
     font-size: 16px;
     color: #ffffff;
     font-family: 'Manrope', sans-serif;
     font-weight: 400;
+    transition: 0.2s;
 }
-.home .hero-buttons .trial-button .material-symbols-outlined{
-font-size: 16px;
+
+.home #hero-buttons .first-button .material-symbols-outlined {
+    font-size: 16px;
     color: #ffffff;
 }
 
-.home .trial-btn.secondary {
+.home #hero-buttons .second-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 999px;
+    width: 165px;
+    height: 48px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    transition: 0.2s;
 }
 
-.home .trial-btn .material-symbols-outlined {
-    font-size: 18px;
+.home #hero-buttons .first-button:hover {
+    background-color: #0b5952
+}
+
+.home #hero-buttons .second-button:hover {
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .home .home-container .statistics {
