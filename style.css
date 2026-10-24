@@ -4,6 +4,8 @@ body {
 }
 
 header {
+    max-width: 1614px;
+    width: 100%;
     z-index: 40;
     height: 81px;
     background-color: #111827;
@@ -111,14 +113,15 @@ header .header-button .FTB:hover {
 
 
 .home {
-    height: 600px;
+    min-height: 600px;
     background-color: #111827;
     position: relative;
     overflow: hidden;
 }
 
 .home .home-container {
-    height: 600px;
+
+    min-height: 600px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -130,8 +133,9 @@ section.home .home-container #home-text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    height: 440px;
-    width: 592px;
+    min-height: 440px;
+   max-width: 592px;
+   width: 100%;
 
 }
 
@@ -403,4 +407,73 @@ section.home .home-container #home-text {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+#classes {
+   min-height:820px ; 
+    max-width: 1200px;
+    width: 100%;
+    padding: 112px 32px;
+    margin: 0px 59px;
+}
+#classes #classes-text{
+    display: flex;
+    align-items:flex-end;
+    justify-content: flex-start;
+}
+#classes #classes-text #text-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+#classes #classes-text #classes-text-block .eyebrow{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2.16px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: rgb(15, 118, 110);
+    margin-bottom: 16px;
+}
+
+#classes #classes-text #classes-text-block .eyebrow::before {
+    content: "";
+    width: 32px;
+    height: 2px;
+    background-color: rgb(15, 118, 110);
+}
+ #classes #classes-text #classes-text-block h2{
+    margin: 0px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 800;
+    line-height: 48px;
+    font-size: 48px;
+    letter-spacing: -2.16px;
+    color: #111827;
+    max-width: 556px;
+    width: 100%;
+ }
+ #classes #classes-text .descripiton{
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #64706D;
+    max-width: 512px;
+    width: 100%;
+    margin: 0px;
+ }
+#classes #buttons-to-classes{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-top: 48px;
+    max-width: 1136px;
+    width: 100%;
+    min-height:420px 
 }
