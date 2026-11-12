@@ -2,10 +2,12 @@ body {
     margin: 0;
     padding: 0;
 }
-
+*{
+    box-sizing:border-box;
+}
 header {
-    max-width: 1614px;
     width: 100%;
+    margin: 0 auto;
     z-index: 40;
     height: 81px;
     background-color: #111827;
@@ -63,6 +65,11 @@ header nav ul {
     font-family: 'Manrope', sans-serif;
     font-size: 16px;
 }
+@media (max-width: 1000px) {
+    header nav ul {
+        display: none;
+    }
+}
 
 header nav #main-navigation li a {
     text-decoration: none;
@@ -84,6 +91,11 @@ header nav ul#main-navigation li a.active {
 header .header-button {
     display: flex;
 
+}
+@media (max-width: 1000px) {
+    header .header-button {
+        display: none;
+    }
 }
 
 header .header-button .FTB {
@@ -111,22 +123,124 @@ header .header-button .FTB:hover {
     background-color: #0b5952;
 }
 
+/* MENIU PE TELEFON (ascuns pe desktop) */
+header #menu-toggle {
+    display: none;
+}
+
+header #menu-button {
+    display: none;
+}
+
+header #menu-button .icon-close {
+    display: none;
+}
+
+header #mobile-menu {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    header .header-container {
+        justify-content: space-between;
+    }
+
+    header #menu-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        cursor: pointer;
+    }
+
+    header #menu-button .material-symbols-outlined {
+        font-size: 32px;
+        color: #ffffff;
+    }
+
+    header #menu-toggle:checked ~ #mobile-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 81px;
+        left: 0;
+        width: 100%;
+        padding: 16px 32px 24px 32px;
+        gap: 4px;
+        background-color: #111827;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    header #menu-toggle:checked ~ #menu-button .icon-open {
+        display: none;
+    }
+
+    header #menu-toggle:checked ~ #menu-button .icon-close {
+        display: block;
+    }
+
+    header #mobile-menu a {
+        display: flex;
+        align-items: center;
+        height: 48px;
+        text-decoration: none;
+        font-family: 'Manrope', sans-serif;
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    header #mobile-menu a:hover {
+        color: #ffffff;
+    }
+
+    header #mobile-menu a.active {
+        color: #2dd4bf;
+    }
+
+    header #mobile-menu a.mobile-trial {
+        justify-content: center;
+        width: 140px;
+        margin-top: 12px;
+        background-color: #0F766E;
+        border-radius: 999px;
+        color: #ffffff;
+    }
+
+    header #mobile-menu a.mobile-trial:hover {
+        background-color: #0b5952;
+    }
+}
+
 
 .home {
     min-height: 600px;
+    width:100%;
     background-color: #111827;
     position: relative;
-    overflow: hidden;
+    
 }
 
 .home .home-container {
 
-    min-height: 600px;
+    min-height: 500px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 64px 16px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     position: relative;
     z-index: 1;
+    gap: 40px;
+}
+@media (max-width: 1000px){
+    .home .home-container{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+    
 }
 
 section.home .home-container #home-text {
@@ -136,8 +250,13 @@ section.home .home-container #home-text {
     min-height: 440px;
     max-width: 592px;
     width: 100%;
-
 }
+@media(max-width:1000px){
+    section.home .home-container #home-text{
+        max-width:930px;
+    }
+}
+
 
 .home .eyebrow {
     display: flex;
@@ -152,6 +271,12 @@ section.home .home-container #home-text {
     text-transform: uppercase;
     color: rgb(15, 118, 110);
     margin-bottom: 16px;
+}
+@media(max-width:1000px){
+    .home .eyebrow{
+        max-width: 930px;
+        width: 100%;
+    }
 }
 
 .home .eyebrow::before {
@@ -170,11 +295,21 @@ section.home .home-container #home-text {
     line-height: 67.7px;
     color: #ffffff;
     margin-bottom: 24px;
+    max-width: 592px;
+    width: 100%;
+}
+@media(max-width:1000px){
+    .home h1{
+        max-width: 800px;
+        width: 100%;
+        font-size: 60px;
+    }
 }
 
 .home .description {
     margin: 0;
     max-width: 520px;
+    width: 100%;
     font-family: 'Manrope', sans-serif;
     font-size: 18px;
     line-height: 1.6;
@@ -186,6 +321,11 @@ section.home .home-container #home-text {
     display: flex;
     gap: 16px;
     margin-bottom: 40px;
+}
+@media(max-width:400px){
+    .home #hero-buttons{
+        flex-direction: column;
+    }
 }
 
 .home #hero-buttons .first-button {
@@ -236,7 +376,8 @@ section.home .home-container #home-text {
 }
 
 .home .home-container .statistics {
-    width: 592px;
+    max-width: 592px;
+    width: 100%;
     padding-top: 24px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     display: grid;
@@ -245,6 +386,12 @@ section.home .home-container #home-text {
     justify-content: start;
     column-gap: 32px;
 
+}
+@media (max-width: 1000px) {
+    .home .home-container .statistics {
+        max-width: 930px;
+        width: 100%;
+    }
 }
 
 .home .statistics .stat-number {
@@ -262,8 +409,9 @@ section.home .home-container #home-text {
 }
 
 .home #today-clases {
-    width: 504px;
-    height: 349px;
+    max-width: 504px;
+    width: 100%;
+    min-height: 349px;
     background-color: #172033;
     border-radius: 28px;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -271,16 +419,30 @@ section.home .home-container #home-text {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 28px;
+}
+@media (max-width: 1000px) {
+    .home #today-clases{
+        max-width: 930px;
+        width: 100%;
+    }
 }
 
 
 .home #today-clases #upper-text {
-    width: 446px;
-    height: 52px;
+    max-width: 446px;
+    width: 100%;
+    min-height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    gap: 128px
+    
+}
+@media (max-width: 1000px) {
+    .home #today-clases #upper-text{
+        max-width: 850px;
+        width: 100%;
+    }
 }
 
 
@@ -295,12 +457,14 @@ section.home .home-container #home-text {
     text-transform: uppercase;
 }
 
+
 .home #today-clases #upper-text #text-block h2 {
     margin: 0;
     height: 32px;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 24px;
     line-height: 32px;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     color: #ffffff;
     font-weight: 700;
 }
@@ -324,9 +488,16 @@ section.home .home-container #home-text {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 446px;
-    height: 77px;
+    max-width: 446px;
+    width: 100%;
+    min-height: 77px;
     gap: 12px;
+}
+@media (max-width: 1000px) {
+    .home #today-clases .today-card{
+        max-width: 850px;
+        width: 100%;
+    }
 }
 
 .home #today-clases .today-card .time {
@@ -338,12 +509,19 @@ section.home .home-container #home-text {
 }
 
 .home #today-clases .today-card .text-block2 {
-    width: 318px;
-    height: 44px;
+    max-width: 318px;
+    width: 100%;
+    min-height: 44px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+}
+@media (max-width: 1000px) {
+    .home #today-clases .today-card .text-block2{ 
+        max-width: 750px;
+        width: 100%;
+    }
 }
 
 .home #today-clases .today-card .text-block2 .clases {
@@ -353,7 +531,14 @@ section.home .home-container #home-text {
     line-height: 24px;
     color: #ffffff;
     height: 24px;
-    width: 318px;
+    max-width: 318px;
+    width: 100%;
+}
+@media (max-width: 1000px) {
+    .home #today-clases .today-card .text-block2 .clases{ 
+        max-width: 750px;
+        width: 100%;
+    }
 }
 
 .home #today-clases .today-card .text-block2 .coaches {
@@ -362,9 +547,16 @@ section.home .home-container #home-text {
     line-height: 16px;
     font-weight: 400;
     color: rgba(225, 225, 255, 0.5);
-    width: 318px;
+    max-width: 318px;
+    width: 100%;
     height: 16px;
     margin-top: 4px;
+}
+@media (max-width: 1000px) {
+    .home #today-clases .today-card .text-block2 .coaches{ 
+        max-width: 750px;
+        width: 100%;
+    }
 }
 
 .home #today-clases .today-card .arrow {
@@ -403,14 +595,19 @@ section.home .home-container #home-text {
     height: 100%;
     z-index: 0;
     background-image: linear-gradient(90deg, #111827 15%, rgba(17, 24, 39, 0.6) 40%, rgba(17, 24, 39, 0.4) 100%),
-        url(images/background-hero.png);
+        url(images/background-hero.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
+@media (max-width: 1000px) {
+    .home #background-img {
+        display: none;
+    }
+}
 
 #classes {
-    height: 820px;
+    height: auto;
     width: 100%;
     padding: 112px 32px;
     box-sizing: border-box;
@@ -421,10 +618,19 @@ section.home .home-container #home-text {
 }
 
 #classes #classes-text {
-    width: 1136px;
+    max-width: 1135px;
+    width:  100%;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    margin-bottom: 48px;
+}
+@media (max-width: 1000px) {
+    #classes #classes-text {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
 }
 
 #classes #classes-text #classes-text-block {
@@ -479,13 +685,15 @@ section.home .home-container #home-text {
 }
 
 #classes #buttons-to-classes {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
     gap: 20px;
-    margin-top: 48px;
-    max-width: 1136px;
-    width: 100%;
-    min-height: 420px
+    min-height: 420px;
+}
+@media (max-width: 1200px) {
+    #classes #buttons-to-classes {
+        flex-direction: column;
+        gap: 32px;
+    }
 }
 
 #classes #first-class {
@@ -589,7 +797,7 @@ section.home .home-container #home-text {
 
 #about {
     width: 100%;
-    height: 644px;
+    min-height: 644px;
     background-color: #F1F5F4;
     display: flex;
     justify-content: center;
@@ -597,15 +805,26 @@ section.home .home-container #home-text {
 }
 
 #about #about-container {
-    width: 1136px;
-    height: 420px;
+    max-width: 1136px;
+    width: 100%;
+    min-height: 420px;
     display: flex;
     align-items: center;
     gap: 48px;
+    padding: 0 32px;
+}
+@media (max-width: 750px) {
+    #about #about-container {
+        flex-direction: column;
+        gap: 32px;
+        height: auto;
+        padding: 40px;
+    }
 }
 
 #about #about-image {
-    width: 490px;
+    max-width: 490px;
+    width: 100%;
     height: 420px;
     border-radius: 28px;
     background-image: url(images/about.jpg);
@@ -616,6 +835,13 @@ section.home .home-container #home-text {
     background-repeat: no-repeat;
     position: relative;
 }
+@media (max-width: 750px) {
+    #about #about-image {
+        max-width: 700px;
+        width: 100%;
+    }
+}
+
 
 #about #about-image #about-card {
     position: absolute;
@@ -649,10 +875,17 @@ section.home .home-container #home-text {
 }
 
 #about #about-text {
-    width: 598px;
+    max-width: 598px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+@media (max-width: 750px) {
+    #about #about-text {
+        max-width: 700px;
+        width: 100%;
+    }
 }
 
 #about .eyebrow {
@@ -698,7 +931,8 @@ section.home .home-container #home-text {
     font-weight: 400;
     line-height: 28px;
     color: #64706D;
-    width: 598px;
+    max-width: 598px;
+    width: 100%;
 }
 
 #about #about-text .our-story {
@@ -737,24 +971,36 @@ section.home .home-container #home-text {
 }
 
 footer {
-    width: 100%;
+    max-width: 100%;
     height: 305px;
     background-color: #111827;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 64px 32px;
 }
 
 footer #footer-container {
-    width: 1136px;
+    max-width: 1136px;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    
 }
 
 footer #footer-top {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    
+}
+@media (max-width: 750px) {
+    footer #footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+    }
 }
 
 footer #footer-brand {
@@ -795,7 +1041,8 @@ footer #footer-logo #footer-logo-text {
 
 footer #footer-brand .footer-description {
     margin: 0;
-    width: 380px;
+    max-width: 380px;
+    width: 100%;
     font-family: 'Manrope', sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -811,6 +1058,9 @@ footer #footer-navigation {
     padding: 0;
     font-family: 'Manrope', sans-serif;
     font-size: 16px;
+    max-width: 400px;
+    width: 100%;
+    flex-wrap: wrap;    
 }
 
 footer #footer-navigation li a {
@@ -824,12 +1074,18 @@ footer #footer-navigation li a:hover {
 }
 
 footer #footer-bottom {
+    width:100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 48px;
     padding-top: 24px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+@media (max-width: 750px) {
+    footer #footer-bottom {
+        margin-top: 20px;
+    }
 }
 
 footer #footer-bottom .footer-small {
@@ -838,4 +1094,198 @@ footer #footer-bottom .footer-small {
     font-weight: 400;
     line-height: 16px;
     color: rgba(255, 255, 255, 0.4);
+}
+
+
+
+@media (max-width: 600px) {
+
+    /* HEADER */
+    header .header-container {
+        padding: 0 16px;
+    }
+
+    header #menu-toggle:checked ~ #mobile-menu {
+        padding: 16px 16px 24px 16px;
+    }
+
+    
+    .home .home-container {
+        width: 360px;
+        padding: 40px 10px;
+        gap: 32px;
+        align-items: center;
+    }
+
+    section.home .home-container #home-text {
+        width: 340px;
+        max-width: 340px;
+        min-height: 0;
+    }
+
+    .home .eyebrow {
+        width: 340px;
+        max-width: 340px;
+    }
+
+    .home h1 {
+        width: 340px;
+        max-width: 340px;
+        font-size: 40px;
+        line-height: 44px;
+        letter-spacing: -1.5px;
+    }
+
+    .home .description {
+        width: 340px;
+        max-width: 340px;
+        font-size: 16px;
+    }
+
+    .home #hero-buttons {
+        flex-direction: column;
+    }
+
+    .home .home-container .statistics {
+        width: 340px;
+        max-width: 340px;
+        column-gap: 16px;
+    }
+
+    .home #today-clases {
+        width: 340px;
+        max-width: 340px;
+        padding: 20px;
+    }
+
+    .home #today-clases #upper-text {
+        width: 300px;
+        max-width: 300px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .home #today-clases .today-card {
+        width: 300px;
+        max-width: 300px;
+    }
+
+    .home #today-clases .today-card .text-block2 {
+        width: 170px;
+        max-width: 170px;
+    }
+
+    .home #today-clases .today-card .text-block2 .clases {
+        width: 170px;
+        max-width: 170px;
+    }
+
+    .home #today-clases .today-card .text-block2 .coaches {
+        width: 170px;
+        max-width: 170px;
+    }
+
+    
+    #classes {
+        padding: 56px 10px;
+    }
+
+    #classes #classes-text {
+        width: 340px;
+        max-width: 340px;
+        margin-bottom: 32px;
+    }
+
+    #classes #classes-text #classes-text-block h2 {
+        width: 340px;
+        max-width: 340px;
+        font-size: 32px;
+        line-height: 36px;
+        letter-spacing: -1px;
+    }
+
+    #classes #classes-text .descripiton {
+        width: 340px;
+        max-width: 340px;
+    }
+
+    #classes #first-class,
+    #classes #second-class,
+    #classes #third-class {
+        width: 340px;
+        height: 380px;
+    }
+
+    #classes .img-content {
+        width: 340px;
+    }
+
+   
+    #about {
+        min-height: 0;
+    }
+
+    #about #about-container {
+        width: 360px;
+        padding: 40px 10px;
+        gap: 32px;
+    }
+
+    #about #about-image {
+        width: 340px;
+        max-width: 340px;
+        height: 300px;
+    }
+
+    #about #about-text {
+        width: 340px;
+        max-width: 340px;
+    }
+
+    #about #about-text h2 {
+        width: 340px;
+        max-width: 340px;
+        font-size: 32px;
+        line-height: 36px;
+        letter-spacing: -1px;
+    }
+
+    #about #about-text .description {
+        width: 340px;
+        max-width: 340px;
+    }
+
+    
+    footer {
+        height: auto;
+        padding: 40px 10px;
+    }
+
+    footer #footer-container {
+        width: 340px;
+        max-width: 340px;
+    }
+
+    footer #footer-top {
+        width: 340px;
+    }
+
+    footer #footer-brand .footer-description {
+        width: 340px;
+        max-width: 340px;
+    }
+
+    footer #footer-navigation {
+        width: 340px;
+        max-width: 340px;
+        gap: 16px;
+    }
+
+    footer #footer-bottom {
+        width: 340px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
 }
