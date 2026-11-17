@@ -420,7 +420,7 @@ section.home .home-container #home-text {
     height: 100%;
     z-index: 0;
     background-image: linear-gradient(90deg, #111827 15%, rgba(17, 24, 39, 0.6) 40%, rgba(17, 24, 39, 0.4) 100%),
-        url(images/background-hero.png);
+        url(images/background-hero.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -501,7 +501,7 @@ section.home .home-container #home-text {
 }
 
 #classes #first-class {
-    background-image: linear-gradient(180deg, rgba(17, 24, 39, 0.2) 0%, rgba(17, 24, 39, 0.9) 100%), url(images/class1.jpg);
+    background-image: linear-gradient(180deg, rgba(17, 24, 39, 0.2) 0%, rgba(17, 24, 39, 0.9) 100%), url(images/class1.webp);
     background-color: #808080;
     background-blend-mode: normal, luminosity;
     background-size: cover;
@@ -520,7 +520,7 @@ section.home .home-container #home-text {
 }
 
 #classes #second-class {
-    background-image: linear-gradient(180deg, rgba(17, 24, 39, 0.2) 0%, rgba(17, 24, 39, 0.9) 100%), url(images/class2.jpg);
+    background-image: linear-gradient(180deg, rgba(17, 24, 39, 0.2) 0%, rgba(17, 24, 39, 0.9) 100%), url(images/class2.webp);
     background-color: #808080;
     background-blend-mode: normal, luminosity;
     background-size: cover;
@@ -539,7 +539,7 @@ section.home .home-container #home-text {
 }
 
 #classes #third-class {
-    background-image: linear-gradient(180deg, rgba(17, 24, 39, 0.2) 0%, rgba(17, 24, 39, 0.9) 100%), url(images/class3.jpg);
+    background-image: linear-gradient(180deg, rgba(17, 24, 39, 0.2) 0%, rgba(17, 24, 39, 0.9) 100%), url(images/class3.webp);
     background-color: #808080;
     background-blend-mode: normal, luminosity;
     background-size: cover;
@@ -630,7 +630,7 @@ section.home .home-container #home-text {
     width: 100%;
     height: 420px;
     border-radius: 28px;
-    background-image: url(images/about.jpg);
+    background-image: url(images/about.webp);
     background-color: #808080;
     background-blend-mode: luminosity;
     background-size: cover;
