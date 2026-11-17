@@ -17,29 +17,184 @@
 
 <body>
     <header>
-        <div class="header-container">
-            <div id="logo">
-                <span id="cercle"><img src="images/logo.png" alt="PulseFit Logo"></span>
-                <span id="text">PULSEFIT</span>
+    <div class="header-container">
+        <div id="logo">
+            <span id="cercle"><img src="images/logo.png" alt="PulseFit Logo"></span>
+            <span id="text">PULSEFIT</span>
+        </div>
+        <nav>
+            <ul id="main-navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="schedule.html" class="active">Schedule</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-button">
+            <a href="contact.html" class="FTB">Free trial
+                <span class="material-symbols-outlined">arrow_forward</span></a>
+        </div>
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" id="menu-button">
+            <span class="icon-open material-symbols-outlined">menu</span>
+            <span class="icon-close material-symbols-outlined">close</span>
+        </label>
+
+        <div id="mobile-menu">
+            <a href="index.html">Home</a>
+            <a href="schedule.html" >Schedule</a>
+            <a href="classes.html">Classes</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="contact.html" class="mobile-trial">Free trial</a>
+        </div>
+    </div>
+</header>
+    <main>
+        <section id="hero">
+            <div class="hero-container">
+                <p class="eyebrow">Plan your week</p>
+                <h1>Make time for your next win.</h1>
+                <p class="description">Browse this week's sessions and reserve your free trial in just a few clicks.</p>
             </div>
-            <nav>
-                <ul id="main-navigation">
+        </section>
+        <section id="timetable">
+            <div id="top-text">
+                <div id="top-text-block">
+                    <p class="eyebrow">Weekly timetable</p>
+                    <h2>Monday · Today</h2>
+                </div>
+                <div class="note">All times shown locally</div>
+            </div>
+
+            <div id="timetable-list">
+    <div class="card">
+        <div class="ora">07:00</div>
+        <div class="sport">
+            <div class="type">Foundation Flow</div>
+            <div class="level">Yoga · Beginner</div>
+        </div>
+        <div class="antrenor">
+            <div class="label">Coach</div>
+            <div class="name">Maya Chen</div>
+        </div>
+        <div class="unde">
+            <div class="label">Where</div>
+            <div class="name">Studio One</div>
+        </div>
+        <a href="contact.html" class="rezervare">Book spot</a>
+    </div>
+    <div class="card">
+        <div class="ora">09:30</div>
+        <div class="sport">
+            <div class="type">Core Control</div>
+            <div class="level">Pilates · All levels</div>
+        </div>
+        <div class="antrenor">
+            <div class="label">Coach</div>
+            <div class="name">Sofia Marin</div>
+        </div>
+        <div class="unde">
+            <div class="label">Where</div>
+            <div class="name">Studio Two</div>
+        </div>
+        <a href="contact.html" class="rezervare">Book spot</a>
+    </div>
+    <div class="card">
+        <div class="ora">18:00</div>
+        <div class="sport">
+            <div class="type">Pulse HIIT</div>
+            <div class="level">HIIT · Advanced</div>
+        </div>
+        <div class="antrenor">
+            <div class="label">Coach</div>
+            <div class="name">Leon Ward</div>
+        </div>
+        <div class="unde">
+            <div class="label">Where</div>
+            <div class="name">Training Floor</div>
+        </div>
+        <a href="contact.html" class="rezervare">Book spot</a>
+    </div>
+    <div class="card">
+        <div class="ora">19:30</div>
+        <div class="sport">
+            <div class="type">Ride Rhythm</div>
+            <div class="level">Spinning · Intermediate</div>
+        </div>
+        <div class="antrenor">
+            <div class="label">Coach</div>
+            <div class="name">Nina Pop</div>
+        </div>
+        <div class="unde">
+            <div class="label">Where</div>
+            <div class="name">Cycle Lab</div>
+        </div>
+        <a href="contact.html" class="rezervare">Book spot</a>
+    </div>
+    <div class="card">
+        <div class="ora">17:00</div>
+        <div class="sport">
+            <div class="type">Strong Start</div>
+            <div class="level">Strength · Beginner</div>
+        </div>
+        <div class="antrenor">
+            <div class="label">Coach</div>
+            <div class="name">Marcus Hall</div>
+        </div>
+        <div class="unde">
+            <div class="label">Where</div>
+            <div class="name">Training Floor</div>
+        </div>
+        <a href="contact.html" class="rezervare">Book spot</a>
+    </div>
+    <div class="card">
+        <div class="ora">20:00</div>
+        <div class="sport">
+            <div class="type">Combat Conditioning</div>
+            <div class="level">Boxing · Intermediate</div>
+        </div>
+        <div class="antrenor">
+            <div class="label">Coach</div>
+            <div class="name">Elena Rusu</div>
+        </div>
+        <div class="unde">
+            <div class="label">Where</div>
+            <div class="name">Studio One</div>
+        </div>
+        <a href="contact.html" class="rezervare">Book spot</a>
+    </div>
+</div>
+        </section>
+    </main>
+    <footer>
+        <div id="footer-container">
+            <div id="footer-top">
+                <div id="footer-brand">
+                    <div id="footer-logo">
+                        <span id="footer-cercle"><img src="images/logo.png" alt="PulseFit Logo"></span>
+                        <span id="footer-logo-text">PULSEFIT</span>
+                    </div>
+                    <p class="footer-description">Local group fitness with expert coaching, positive energy and a place
+                        for everybody.</p>
+                </div>
+                <ul id="footer-navigation">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="schedule.html" class="active">Schedule</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
                     <li><a href="classes.html">Classes</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-            </nav>
-
-            <div class="header-button">
-                <a href="#" class="FTB">Free trial
-                    <span class="material-symbols-outlined">arrow_forward</span></a>
-
+            </div>
+            <div id="footer-bottom">
+                <div class="footer-small">© 2026 PulseFit Gym</div>
+                <div class="footer-small">Move well. Feel strong. Stay connected.</div>
             </div>
         </div>
-    </header>
-<body>
-    
+    </footer>
 </body>
+
 </html>

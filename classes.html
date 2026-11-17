@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&family=Space+Grotesk:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+    <title>PulseFit-Gym</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div id="logo">
+                <span id="cercle"><img src="images/logo.png" alt="PulseFit Logo"></span>
+                <span id="text">PULSEFIT</span>
+            </div>
+            <nav>
+                <ul id="main-navigation">
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="classes.html" class="active">Classes</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-button">
+                <a href="#" class="FTB">Free trial
+                    <span class="material-symbols-outlined">arrow_forward</span></a>
+            </div>
+
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" id="menu-button">
+                <span class="icon-open material-symbols-outlined">menu</span>
+                <span class="icon-close material-symbols-outlined">close</span>
+            </label>
+
+            <div id="mobile-menu">
+                <a href="index.html" >Home</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="classes.html" class="active">Classes</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="#" class="mobile-trial">Free trial</a>
+            </div>
+        </div>
+    </header>
+    <main>
+    <section id="hero">
+        <div class="hero-container">
+            <p class="eyebrow">Group fitness</p>
+            <h1 class="long-title">A class for every kind of strong.</h1>
+            <p class="description">Filter by style or experience level, save your favourites, and find the session that feels right.</p>
+        </div>
+    </section>
+
+    <section id="catalog">
+        <div id="filters">
+            <select class="filter-select" aria-label="Style">
+                <option>All</option>
+                <option>Yoga</option>
+                <option>Pilates</option>
+                <option>HIIT</option>
+                <option>Spinning</option>
+                <option>Strength</option>
+                <option>Boxing</option>
+            </select>
+            <select class="filter-select" aria-label="Level">
+                <option>All</option>
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+                <option>All levels</option>
+            </select>
+            <div class="search">
+                <input type="text" placeholder="Search by class name">
+                <span class="material-symbols-outlined">search</span>
+            </div>
+        </div>
+
+        <div id="results-count">6 classes found</div>
+
+        <div id="classes-grid">
+            <div class="cards-row">
+                <div class="class-card">
+                    <div class="image">
+                        <img src="images/class1.jpg" alt="Foundation Flow">
+                        <button class="favorite"><span class="material-symbols-outlined">favorite</span></button>
+                    </div>
+                    <div class="info">
+                        <div class="category">Yoga</div>
+                        <h3 class="title">Foundation Flow</h3>
+                        <div class="meta">
+                            <div class="time">
+                                <span class="material-symbols-outlined">schedule</span>
+                                <span>50 min</span>
+                            </div>
+                            <div class="level">Beginner</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="class-card">
+                    <div class="image">
+                        <img src="images/class2.jpg" alt="Core Control">
+                        <button class="favorite"><span class="material-symbols-outlined">favorite</span></button>
+                    </div>
+                    <div class="info">
+                        <div class="category">Pilates</div>
+                        <h3 class="title">Core Control</h3>
+                        <div class="meta">
+                            <div class="time">
+                                <span class="material-symbols-outlined">schedule</span>
+                                <span>45 min</span>
+                            </div>
+                            <div class="level">All levels</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="class-card">
+                    <div class="image">
+                        <img src="images/class3.jpg" alt="Pulse HIIT">
+                        <button class="favorite"><span class="material-symbols-outlined">favorite</span></button>
+                    </div>
+                    <div class="info">
+                        <div class="category">HIIT</div>
+                        <h3 class="title">Pulse HIIT</h3>
+                        <div class="meta">
+                            <div class="time">
+                                <span class="material-symbols-outlined">schedule</span>
+                                <span>40 min</span>
+                            </div>
+                            <div class="level">Advanced</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards-row">
+                <div class="class-card">
+                    <div class="image">
+                        <img src="images/class4.jpg" alt="Ride Rhythm">
+                        <button class="favorite"><span class="material-symbols-outlined">favorite</span></button>
+                    </div>
+                    <div class="info">
+                        <div class="category">Spinning</div>
+                        <h3 class="title">Ride Rhythm</h3>
+                        <div class="meta">
+                            <div class="time">
+                                <span class="material-symbols-outlined">schedule</span>
+                                <span>45 min</span>
+                            </div>
+                            <div class="level">Intermediate</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="class-card">
+                    <div class="image">
+                        <img src="images/class5.jpg" alt="Strong Start">
+                        <button class="favorite"><span class="material-symbols-outlined">favorite</span></button>
+                    </div>
+                    <div class="info">
+                        <div class="category">Strength</div>
+                        <h3 class="title">Strong Start</h3>
+                        <div class="meta">
+                            <div class="time">
+                                <span class="material-symbols-outlined">schedule</span>
+                                <span>55 min</span>
+                            </div>
+                            <div class="level">Beginner</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="class-card">
+                    <div class="image">
+                        <img src="images/class6.jpg" alt="Combat Conditioning">
+                        <button class="favorite"><span class="material-symbols-outlined">favorite</span></button>
+                    </div>
+                    <div class="info">
+                        <div class="category">Boxing</div>
+                        <h3 class="title">Combat Conditioning</h3>
+                        <div class="meta">
+                            <div class="time">
+                                <span class="material-symbols-outlined">schedule</span>
+                                <span>50 min</span>
+                            </div>
+                            <div class="level">Intermediate</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+    <footer>
+        <div id="footer-container">
+            <div id="footer-top">
+                <div id="footer-brand">
+                    <div id="footer-logo">
+                        <span id="footer-cercle"><img src="images/logo.png" alt="PulseFit Logo"></span>
+                        <span id="footer-logo-text">PULSEFIT</span>
+                    </div>
+                    <p class="footer-description">Local group fitness with expert coaching, positive energy and a place
+                        for everybody.</p>
+                </div>
+                <ul id="footer-navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div id="footer-bottom">
+                <div class="footer-small">© 2026 PulseFit Gym</div>
+                <div class="footer-small">Move well. Feel strong. Stay connected.</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
